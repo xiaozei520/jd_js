@@ -39,7 +39,8 @@ const jdCookieNode = $.isNode() ? require("./jdCookie.js") : "";
 $.showLog = $.getdata("cfd_showLog") ? $.getdata("cfd_showLog") === "true" : false;
 $.notifyTime = $.getdata("cfd_notifyTime");
 $.result = [];
-$.shareCodes = [];
+$.
+Codes = [];
 let cookiesArr = [], cookie = '', token;
 
 const randomCount = $.isNode() ? 3 : 3;
@@ -99,7 +100,7 @@ $.appId = 10009;
     $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
     token = await getJxToken();
     if (!token) continue
-    $.canHelp = true
+    $.canHelp = false
     if ($.shareCodes && $.shareCodes.length) console.log(`\n\n寻宝大作战，自己账号内部循环互助\n\n`);
     for (let id of $.shareCodes) {
       console.log(`账号${$.UserName} 去参加 ${id} 寻宝大作战`)
